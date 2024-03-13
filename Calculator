@@ -1,0 +1,38 @@
+print("Select any operator:")
+print("Add")
+print("Subtract")
+print("Multiply")
+print("Divide")
+
+def add(a, b):
+    return a + b
+
+def subtract(a, b):
+    return a - b
+
+def multiply(a, b):
+    return a * b
+
+def divide(a, b):
+    if b == 0:
+        return "Division by zero is not possible."
+    else:
+        return a / b
+
+while True:
+    choice = input("Enter your operation choice: ")
+
+    if choice in ('Add', 'Subtract', 'Multiply', 'Divide'):
+        num1 = float(input("Enter any number: "))
+        num2 = float(input("Enter another number: "))
+
+        if choice == 'Add':
+            print("Result is :", add(num1, num2))
+        elif choice == 'Subtract':
+            print("Result is :", subtract(num1, num2))
+        elif choice == 'Multiply':
+            print("Result is :", multiply(num1, num2))
+        elif choice == 'Divide':
+            print("Result is :", divide(num1, num2))
+    else:
+        print("Invalid Input...")
